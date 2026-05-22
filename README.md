@@ -1,80 +1,90 @@
-# 🏢 Virtual Company Team Skill
+# 🏢 Virtual Company Team Skill (2026 更新版)
 
-> An AI-powered virtual company team skill that simulates real-world product development workflows.
+> 一个由 AI 驱动的虚拟公司团队技能，模拟真实世界的产品开发流程，集成最新的 AI 开发工具和最佳实践。
 
-## 📖 Overview
+## 📖 概述
 
-This skill provides a complete virtual company team structure for AI-assisted product development. It defines roles, workflows, and deliverables that mirror real software development organizations.
+本技能提供了完整的虚拟公司团队结构，用于 AI 辅助的产品开发。它定义了角色、工作流和交付物，反映了现代软件开发组织的最佳实践，并深度整合了 AI 辅助开发流程。
 
-## 👥 Team Roles
+## 🆕 2026 年更新亮点
 
-| Role | Description |
-|------|-------------|
-| **Client/甲方** | Business requirements provider |
-| **Product Manager/产品经理** | Requirements analysis, PRD creation |
-| **Project Manager/项目经理** | Schedule, risk, progress management |
-| **Tech Lead/开发组长** | Architecture, code review, technical decisions |
-| **Full-Stack Developer/全栈开发** | Feature implementation |
-| **QA Engineer/测试工程师** | Testing, quality assurance |
-| **DevOps Engineer/运维工程师** | Deployment, CI/CD, monitoring |
+- **AI 增强开发流程**：全流程集成 AI 辅助工具
+- **最新技术栈**：2026 年主流技术推荐
+- **Monorepo 架构**：现代项目结构
+- **可观测性优先**：Metrics/Logs/Traces 三位一体
+- **GitOps 实践**：自动化部署流程
 
-## 📋 Features
+## 👥 团队角色
 
-- Complete role definitions and responsibilities
-- Team collaboration workflow templates
-- Sprint planning and tracking
-- PRD document templates
-- Code quality standards
-- Git workflow guide
-- Tech stack recommendations
+| 角色 | 描述 |
+|------|------|
+| **Client/甲方** | 业务需求提供方 |
+| **Product Manager/产品经理** | 需求分析、PRD 编写 |
+| **Project Manager/项目经理** | 进度、风险、进度管理 |
+| **Tech Lead/开发组长** | 架构、代码审查、技术决策 |
+| **Full-Stack Developer/全栈开发** | 功能实现（AI 辅助） |
+| **QA Engineer/测试工程师** | 测试、质量保障 |
+| **DevOps Engineer/运维工程师** | 部署、GitOps、可观测性 |
 
-## 🚀 Usage
+## 📋 特性
 
-This skill is designed for AI assistants to use when:
-- Building products/projects from scratch
-- Managing agile development teams
-- Creating technical documentation
-- Setting up CI/CD pipelines
-- Performing code reviews
+- 完整的角色定义和职责说明
+- 团队协作工作流模板
+- Sprint 计划与追踪
+- PRD 文档模板
+- 代码质量标准（AI 增强）
+- Git 工作流指南（GitHub Flow）
+- 2026 年最新技术栈推荐
+- AI 辅助开发工具链
 
-## 📁 Structure
+## 🚀 使用场景
+
+本技能适用于 AI 助手在以下场景使用：
+- 从零开始构建产品/项目
+- 管理敏捷开发团队
+- 创建技术文档
+- 设置 GitOps CI/CD 流水线
+- 执行 AI 辅助的代码审查
+- 构建 RAG/AI Agent 应用
+
+## 📁 结构
 
 ```
 virtual-company-team-skill/
-├── SKILL.md                 # Main skill file
+├── SKILL.md                 # 主技能文件 (2026 更新版)
 ├── references/
-│   ├── roles.md             # Role-playing guide
-│   └── workflows.md         # Development workflows
-└── README.md                # This file
+│   ├── roles.md             # 角色扮演指南
+│   └── workflows.md         # 开发工作流 (2026 AI 增强版)
+└── README.md                # 本文件
 ```
 
-## 📝 Example Workflow
+## 📝 示例工作流
 
 ```
-【Team Meeting】
-Time: 2026-04-29 15:00
-Attendees: [Client, PM, Tech Lead, PM]
+【团队会议】
+时间: 2026-05-22 15:00
+参与: [甲方, 产品经理, 开发组长, 项目经理]
 
-[Client]: We need a data management platform...
-[PM]: What's the expected user scale?
-[Tech Lead]: I recommend Spring Boot + Vue...
-[PM]: Based on that, I estimate 3 sprints...
+[甲方]: 我们需要一个智能知识库平台...
+[产品经理]: 目标用户规模？需要 AI 问答功能吗？
+[开发组长]: 我推荐 Next.js 16 + PostgreSQL + pgvector 向量数据库...
+[项目经理]: 基于此，我估计需要 3 个 Sprint，使用 AI 工具加速开发...
 
-Conclusion: Approved for development
-Action Items:
-- @PM: Create PRD document
-- @Tech Lead: Design architecture
-- @PM: Create sprint plan
+结论: 批准开发
+行动项:
+- @产品经理: 输出 PRD 文档（AI 辅助竞品分析）
+- @开发组长: 设计架构（AI 辅助评审）
+- @项目经理: 创建 Sprint 计划
 ```
 
-## 🔗 Related Projects
+## 🔗 相关项目
 
-- [E-LOG Platform](https://github.com/SZJ-816/E-LOG) - Enterprise Data Management Platform built with this skill
+- [E-LOG Platform](https://github.com/SZJ-816/E-LOG) - 使用此技能构建的企业数据管理平台
 
-## 📄 License
+## 📄 许可证
 
 MIT License
 
 ---
 
-*Empowering AI assistants with structured team collaboration*
+*用结构化团队协作和 AI 增强工具赋能 AI 助手 | 最后更新: 2026-05-22*

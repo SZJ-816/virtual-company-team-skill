@@ -226,49 +226,73 @@ description: 虚拟公司团队协作技能，模拟真实公司的产品开发�
 
 ---
 
-## 🛠 技术栈参考
+## 🛠 技术栈参考 (2026)
 
 ### 后端
 | 语言/框架 | 适用场景 |
 |-----------|----------|
-| Java (Spring Boot) | 企业级应用 |
-| Python (FastAPI/Django) | 快速开发/API |
-| Node.js (Express/Koa) | 实时应用/Web |
-| Go | 高性能服务 |
+| Java (Spring Boot 4.x) | 企业级应用 |
+| Python (FastAPI 1.0+/Django 6.x) | 快速开发/API |
+| Node.js (NestJS 12.x) | 企业级Node.js应用 |
+| Go (Gin/Go-Zero) | 高性能微服务 |
+| Rust (Axum) | 极致性能/系统级应用 |
+| TypeScript (Hono) | 边缘计算/全栈API |
 
 ### 前端
 | 框架 | 适用场景 |
 |------|----------|
-| React/Vue | Web应用 |
-| uni-app | 跨平台移动端 |
-| Flutter | 原生移动应用 |
+| React 20.x + Next.js 16.x | Web应用 |
+| Vue 4.x + Nuxt 5.x | Web应用 |
+| Svelte 5.x + SvelteKit | 高性能Web应用 |
+| Taro 4.x | 小程序/多端统一 |
+| Flutter 5.x | 原生移动应用 |
+| Solid.js | 高性能响应式应用 |
+
+### AI/LLM 集成
+| 技术 | 用途 |
+|------|------|
+| LangChain 2.x | LLM应用开发 |
+| LlamaIndex | RAG系统 |
+| OpenAI API/Anthropic API | 大模型调用 |
+| Ollama | 本地模型部署 |
+| Vercel AI SDK | AI应用快速开发 |
 
 ### 数据库
 | 类型 | 适用场景 |
 |------|----------|
-| MySQL | 关系型/事务 |
-| PostgreSQL | 高级关系型 |
-| MongoDB | 文档/灵活Schema |
-| Redis | 缓存/会话 |
-| Elasticsearch | 搜索 |
+| PostgreSQL 17.x + pgvector | 关系型/向量数据库 |
+| MySQL 9.x | 关系型/事务 |
+| MongoDB 8.x | 文档/灵活Schema |
+| Redis 8.x | 缓存/队列/会话 |
+| ClickHouse 25.x | 实时分析 |
+| Qdrant/Pinecone | 向量搜索 |
+| DuckDB | 嵌入式分析数据库 |
 
-### 基础设施
+### 基础设施 & DevOps
 | 技术 | 用途 |
 |------|------|
-| Docker | 容器化 |
-| Kubernetes | 编排 |
-| Jenkins/GitHub Actions | CI/CD |
-| Prometheus/Grafana | 监控 |
-| ELK | 日志 |
-| Hadoop/HDFS | 大数据 |
+| Docker + BuildKit | 容器化构建 |
+| Kubernetes 1.30+ | 容器编排 |
+| GitHub Actions / GitLab CI | CI/CD |
+| Prometheus 3.x + Grafana 12.x | 可观测性 |
+| Loki + Tempo | 日志/追踪 |
+| Terraform 2.x / Pulumi | 基础设施即代码 |
+| Nix | 可复现构建 |
+
+### 边缘与 Serverless
+| 技术 | 用途 |
+|------|------|
+| Cloudflare Workers / Vercel Edge Functions | 边缘计算 |
+| AWS Lambda / Serverless Framework | Serverless |
+| Deno Deploy | 轻量级部署 |
 
 ---
 
-## 📈 代码质量标准
+## 📈 代码质量标准 (2026)
 
 ### 提交规范 (Conventional Commits)
 ```
-<type>: <描述>
+<type>(<scope>): <描述>
 [optional body]
 [optional footer]
 ```
@@ -280,16 +304,31 @@ description: 虚拟公司团队协作技能，模拟真实公司的产品开发�
 - `refactor`: 重构
 - `test`: 测试
 - `chore`: 构建/工具
+- `ai`: AI 辅助开发相关
 
-### 分支策略
+### 分支策略 (GitHub Flow)
 ```
-main          ← 生产环境
-release/      ← 发布分支
-develop       ← 开发集成
-feature/      ← 功能开发
-bugfix/       ← Bug修复
-hotfix/       ← 紧急修复
+main          ← 生产环境 (可部署)
+  ↑ squash merge
+feature/xxx   ← 功能开发分支
 ```
+
+### 代码质量工具
+| 工具 | 用途 |
+|------|------|
+| Biome / ESLint 9.x | JavaScript/TypeScript 代码检查 |
+| Prettier | 代码格式化 |
+| Ruff | Python 代码检查 |
+| SonarQube | 代码质量分析 |
+| Snyk / Dependabot | 安全漏洞扫描 |
+
+### AI 辅助开发
+| 工具 | 用途 |
+|------|------|
+| GitHub Copilot X | 代码补全与聊天 |
+| Cursor / Windsurf | AI 原生编辑器 |
+| Claude / GPT-4o | 代码审查与架构设计 |
+| Amazon Q / CodeWhisperer | 企业级 AI 编程助手 |
 
 ### PR规范
 每个PR必须包含：
@@ -297,25 +336,71 @@ hotfix/       ← 紧急修复
 - 改动说明
 - 测试结果
 - 截图（UI改动）
+- AI 辅助开发记录（如使用）
 
 ---
 
-## 📁 推荐项目结构
+## 📁 推荐项目结构 (2026)
 
+### 单仓库 (Monorepo) 结构
 ```
 project/
-├── src/
-│   ├── main/
-│   │   ├── java/        # Java源码
-│   │   ├── resources/   # 配置
-│   │   └── webapp/      # 前端资源
-│   └── test/            # 测试
-├── docs/                # 文档
-├── docker/              # Docker配置
-├── sql/                 # 数据库脚本
-├── pom.xml / package.json
+├── apps/                    # 应用程序
+│   ├── web/                 # Web 应用 (Next.js/Nuxt)
+│   ├── mobile/              # 移动应用 (Flutter/Taro)
+│   └── api/                 # 后端 API
+├── packages/                # 共享包
+│   ├── ui/                  # 共享 UI 组件库
+│   ├── shared/              # 共享工具/类型
+│   └── database/            # 数据库层
+├── infra/                   # 基础设施
+│   ├── terraform/           # IaC 配置
+│   └── k8s/                 # Kubernetes 配置
+├── docs/                    # 文档
+├── tools/                   # 开发工具
+├── .github/                 # GitHub Actions
+├── package.json             # Monorepo 配置 (pnpm/turborepo)
 ├── README.md
 └── .gitignore
+```
+
+### 全栈应用结构 (Next.js 示例)
+```
+web-app/
+├── src/
+│   ├── app/                 # App Router (Next.js 16)
+│   │   ├── api/             # API Routes
+│   │   ├── (auth)/          # 路由组
+│   │   └── layout.tsx
+│   ├── components/          # React 组件
+│   ├── lib/                 # 工具函数
+│   ├── hooks/               # React Hooks
+│   ├── styles/              # 样式
+│   └── types/               # TypeScript 类型
+├── prisma/                  # ORM 配置
+├── public/                  # 静态资源
+├── next.config.js
+├── tailwind.config.ts
+└── tsconfig.json
+```
+
+### 后端 API 结构 (NestJS 示例)
+```
+api/
+├── src/
+│   ├── modules/             # 功能模块
+│   │   ├── user/
+│   │   └── product/
+│   ├── common/              # 共享代码
+│   │   ├── guards/
+│   │   ├── interceptors/
+│   │   └── decorators/
+│   ├── config/              # 配置
+│   └── main.ts
+├── test/
+├── prisma/
+├── docker-compose.yml
+└── nest-cli.json
 ```
 
 ---
@@ -327,9 +412,27 @@ project/
 1. **读取此Skill** → 了解团队角色和流程
 2. **启动团队会议** → 角色扮演讨论
 3. **输出规划文档** → PRD + 技术方案 + 计划
-4. **迭代开发** → 按Sprint执行
+4. **迭代开发** → 按Sprint执行，充分利用 AI 辅助工具
 5. **持续交付** → 测试 → 部署 → 上线
+
+## 🌟 2026 新增最佳实践
+
+### AI 驱动开发
+- **架构设计**：使用 Claude/GPT-4o 进行架构评审
+- **代码生成**：利用 Copilot/Amazon Q 加速开发
+- **测试生成**：AI 自动生成单元测试和集成测试
+- **代码审查**：AI 先进行初审，再人工复核
+
+### 快速原型
+- **RAG 系统**：快速构建知识问答系统
+- **AI Agent**：利用 LangChain 构建智能代理
+- **Vector DB**：使用 pgvector/Qdrant 实现语义搜索
+
+### DevOps 现代化
+- **可观测性优先**：Metrics, Logs, Traces 三位一体
+- **GitOps**：ArgoCD 自动化部署
+- **安全左移**：Snyk/Dependabot 持续安全扫描
 
 ---
 
-*最后更新: 2026-04-29*
+*最后更新: 2026-05-22*
